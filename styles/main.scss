@@ -1,4 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$primary-color: #212529;
+$secondary-color: #fff;
+$accent-color: #8A5E36;
+$font-family-primary: 'Barlow', sans-serif;
+
 body {
-  background-color: pink;
-  color: white;
+  font-family: $font-family-primary;
+  background-color: $secondary-color;
+  color: $primary-color;
+  a {
+    color: $primary-color;
+    &:hover {
+      color: $accent-color;
+    }
+  }
 }
