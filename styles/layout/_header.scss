@@ -7,9 +7,7 @@
   position: relative;
 
   .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include mixins.flexbox($justify: space-around);
   }
 
   .navbar-brand img {
@@ -17,9 +15,7 @@
   }
 
   .navbar-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include mixins.flexbox($justify: space-between);
 
     .navbar-nav {
       @include mixins.flexbox();
@@ -115,10 +111,7 @@
   }
 
   .sidebar-nav {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
+    @include mixins.flexbox($align: start, $direction: column);
     gap: 1.5rem;
 
     .nav-item {

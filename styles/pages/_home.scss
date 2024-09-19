@@ -34,10 +34,7 @@
   &.banner-2 {
     background-image: url('../../assets/banner-2.png');
     min-height: 25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include mixins.flexbox($direction: column);
 
     h2 {
       color: variables.$heading-color;
