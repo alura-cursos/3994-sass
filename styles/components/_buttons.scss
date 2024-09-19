@@ -14,8 +14,8 @@
   background-color: variables.$accent-color;
   transition: background-color variables.$transition-duration ease-in-out;
   &:hover {
-    background-color: darken(variables.$accent-color, 10%);
-    border-color: darken(variables.$accent-color, 10%);
+    background-color: color.adjust(variables.$accent-color, $lightness: -10%);
+    border-color: color.adjust(variables.$accent-color, $lightness: -10%);
   }
   &:focus {
     outline: none;
