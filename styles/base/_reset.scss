@@ -3,14 +3,26 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: variables.$font-family-primary;
   background-color: variables.$secondary-color;
   color: variables.$primary-color;
+  line-height: 1.6;
+
   a {
     color: variables.$primary-color;
+    text-decoration: none;
+    transition: color variables.$transition-duration ease-in-out;
+
     &:hover {
       color: variables.$accent-color;
     }
