@@ -1,4 +1,5 @@
 @use "../base/variables";
+@use "../utils/mixins";
 
 input,
 select {
@@ -12,7 +13,7 @@ select {
   background-clip: padding-box;
   border: 1px solid variables.$form-border-color;
   border-radius: variables.$border-radius;
-  transition: border-color variables.$transition-duration ease-in-out, box-shadow variables.$transition-duration ease-in-out;
+  @include mixins.transition(border-color, box-shadow);
 
   &:focus {
     border-color: variables.$accent-color;

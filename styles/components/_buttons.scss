@@ -1,4 +1,5 @@
 @use "../base/variables";
+@use "../utils/mixins";
 @use 'sass:color';
 
 .btn {
@@ -13,7 +14,7 @@
   font-size: variables.$font-size-base;
   line-height: 1.5;
   background-color: variables.$accent-color;
-  transition: background-color variables.$transition-duration ease-in-out;
+  @include mixins.transition(background-color);
   &:hover {
     background-color: color.adjust(variables.$accent-color, $lightness: -10%);
     border-color: color.adjust(variables.$accent-color, $lightness: -10%);

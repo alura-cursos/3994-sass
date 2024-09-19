@@ -1,6 +1,12 @@
+@use '../base/variables';
+
 @mixin flexbox($justify: center, $align: center, $direction: row) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
   flex-direction: $direction;
+}
+
+@mixin transition($properties...) {
+  transition: $properties variables.$transition-duration ease-in-out;
 }
