@@ -1,4 +1,5 @@
 @use "../base/variables";
+@use 'sass:color';
 
 .btn {
   color: variables.$secondary-color;
