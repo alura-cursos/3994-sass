@@ -1,0 +1,50 @@
+@use "../base/variables";
+
+input,
+select {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: variables.$font-size-base;
+  line-height: 1.5;
+  color: variables.$primary-color;
+  background-color: variables.$secondary-color;
+  background-clip: padding-box;
+  border: 1px solid variables.$form-border-color;
+  border-radius: variables.$border-radius;
+  transition: border-color variables.$transition-duration ease-in-out, box-shadow variables.$transition-duration ease-in-out;
+
+  &:focus {
+    border-color: variables.$accent-color;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(variables.$accent-color, 0.25);
+  }
+}
+
+.form-group {
+  margin-bottom: variables.$margin-bottom-regular;
+
+  label {
+    display: block;
+    margin: 0.5rem;
+  }
+}
+
+.contact {
+  padding: 2rem;
+
+  h3 {
+    text-align: center;
+    margin-bottom: variables.$margin-bottom-regular;
+  }
+
+  .contact-container {
+    width: 50%;
+    max-width: 65%;
+    margin: 0 auto;
+    border: 1px solid #868E96;
+    border-radius: 0.5rem;
+    padding: variables.$padding-regular;
+    margin: 3rem auto;
+  }
+}
