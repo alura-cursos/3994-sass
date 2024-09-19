@@ -1,4 +1,5 @@
 @use '../base/variables';
+@use '../utils/mixins';
 
 .card {
   border: 1px solid variables.$dark-accent-color;
@@ -7,8 +8,7 @@
   box-sizing: border-box;
   flex: 1 1 calc(33% - 1rem);
   margin: 1rem 0; 
-  display: flex;
-  flex-direction: column;
+  @include mixins.flexbox($direction: column);
 
   &:hover {
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
