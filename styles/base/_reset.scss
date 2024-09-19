@@ -1,0 +1,18 @@
+@use 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: variables.$font-family-primary;
+  background-color: variables.$secondary-color;
+  color: variables.$primary-color;
+  a {
+    color: variables.$primary-color;
+    &:hover {
+      color: variables.$accent-color;
+    }
+  }
+}
