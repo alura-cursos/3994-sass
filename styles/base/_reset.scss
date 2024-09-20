@@ -1,4 +1,5 @@
 @use 'variables';
+@use "../utils/mixins";
 
 * {
   margin: 0;
@@ -21,8 +22,7 @@ body {
   a {
     color: variables.$primary-color;
     text-decoration: none;
-    transition: color variables.$transition-duration ease-in-out;
-
+    @include mixins.transition(color);
     &:hover {
       color: variables.$accent-color;
     }

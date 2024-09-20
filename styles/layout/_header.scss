@@ -54,7 +54,7 @@
       height: 0.25rem;
       background-color: variables.$nav-link-color;
       position: relative;
-      transition: variables.$transition-duration ease-in-out;
+      @include mixins.transition(color);
 
       &::before,
       &::after {
@@ -63,7 +63,7 @@
         height: 0.25rem;
         background-color: variables.$nav-link-color;
         position: absolute;
-        transition: variables.$transition-duration ease-in-out;
+        @include mixins.transition(color);
       }
 
       &::before {
@@ -85,7 +85,7 @@
   height: 100%;
   background-color: variables.$secondary-color;
   transform: translateX(100%);
-  transition: transform variables.$transition-duration ease-in-out;
+  @include mixins.transition(transform);
   padding: 2rem;
   box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2); 
   z-index: 1000;
@@ -145,7 +145,7 @@ body.sidebar-open .navbar-brand img {
     background-color: variables.$secondary-color;
     border-radius: 25px;
     cursor: pointer;
-    transition: background-color variables.$transition-duration ease-in-out;
+    @include mixins.transition(border-color, box-shadow);
     display: flex;
     align-items: center;
     border: 1px solid variables.$dark-accent-color;
@@ -158,7 +158,7 @@ body.sidebar-open .navbar-brand img {
       height: 1.125rem; 
       background-color: variables.$dark-accent-color;
       border-radius: 50%;
-      transition: transform variables.$transition-duration ease-in-out;
+      @include mixins.transition(transform);
     }
   }
 
