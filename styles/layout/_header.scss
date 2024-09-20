@@ -1,5 +1,6 @@
 @use "../base/variables";
 @use '../utils/mixins';
+@use "../utils/functions";
 
 .navbar {
   background-color: variables.$secondary-color;
@@ -87,7 +88,7 @@
   transform: translateX(100%);
   @include mixins.transition(transform);
   padding: 2rem;
-  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2); 
+  box-shadow: functions.custom-box-shadow(0.625rem, rgba(0, 0, 0, 0.2));
   z-index: 1000;
 
   &.open {
