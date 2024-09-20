@@ -1,0 +1,16 @@
+@use "../base/variables";
+@use "../utils/mixins";
+
+.footer-content {
+  background-color: variables.$accent-color;
+  color: variables.$secondary-color;
+  text-align: center;
+  padding: variables.$padding-regular;
+  font-size: 0.9rem;
+
+  .footer-image-container {
+    @include mixins.flexbox();
+    gap: 2rem;
+    padding-top: 1rem;
+  }
+}

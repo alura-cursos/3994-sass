@@ -1,0 +1,38 @@
+@use '../base/variables';
+
+.dark-mode {
+  background-color: variables.$dark-primary-color;
+  color: variables.$dark-secondary-color;
+
+  h2,
+  h3,
+  h5 {
+    color: variables.$dark-secondary-color;
+  }
+
+  header, aside {
+    background-color: variables.$dark-primary-color;
+  }
+
+  .modal {
+    background-color: variables.$dark-modal-bg;
+    border-color: variables.$dark-modal-border-color;
+    color: variables.$dark-secondary-color;
+
+    .modal-content .close-button {
+      color: variables.$dark-secondary-color;
+    }
+  }
+
+  .navbar {
+    background-color: variables.$dark-primary-color;
+
+    .navbar-nav .nav-link {
+      color: variables.$dark-secondary-color;
+
+      &:hover {
+        color: variables.$dark-accent-color;
+      }
+    }
+  }
+}
