@@ -1,6 +1,17 @@
 @use '../base/variables';
 @use '../utils/mixins';
 
+%base-h2 {
+  color: variables.$heading-color;
+  font-weight: 400;
+  margin: 2rem 0;
+}
+
+%base-p {
+  margin-bottom: variables.$margin-bottom-regular;
+  line-height: 1.6;
+}
+
 .banner {
   padding: 2rem;
   background-size: cover;
