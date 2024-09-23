@@ -1,5 +1,22 @@
 @use '../base/variables';
 
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 37.5rem) { @content; }
+  } @else if $breakpoint == medium {
+    @media (max-width: 56.25rem) { @content; }
+  } @else if $breakpoint == large {
+    @media (max-width: 75rem) { @content; }
+  }
+}
+
+
+
+
+
+
+
+
 @mixin flexbox($justify: center, $align: center, $direction: row) {
   display: flex;
   justify-content: $justify;
