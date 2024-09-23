@@ -123,5 +123,15 @@
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     margin: 4rem auto;
     padding: 0 2rem;
+
+    @include mixins.respond-to(large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mixins.respond-to(medium) {
+      grid-template-columns: auto;
+    }
+    @include mixins.respond-to(small) {
+      grid-template-columns: 1fr;
+    }
   }
 }

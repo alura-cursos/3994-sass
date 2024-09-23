@@ -76,6 +76,15 @@
       }
     }
   }
+
+  @include mixins.respond-to(custom-64) {
+    .navbar-menu {
+      display: none;
+    }
+    .navbar-toggler {
+      display: block;
+    }
+  }
 }
 
 .sidebar {

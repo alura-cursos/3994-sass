@@ -7,6 +7,8 @@
     @media (max-width: 56.25rem) { @content; }
   } @else if $breakpoint == large {
     @media (max-width: 75rem) { @content; }
+  } @else if $breakpoint == custom-64 {
+    @media (max-width: 64rem) { @content; }
   }
 }
 
