@@ -23,6 +23,18 @@
 
   .card-body {
     padding: variables.$padding-regular;
+
+    @include mixins.respond-to(small) {
+      padding: 0.5rem;
+    }
+
+    @include mixins.respond-to(medium) {
+      padding: 0.75rem;
+    }
+
+    @include mixins.respond-to(large) {
+      padding: variables.$padding-regular;
+    }
   }
 
   h3 {
@@ -31,6 +43,18 @@
     text-align: center;
     margin: 0.5rem 0;
     padding: 0 1rem;
+
+    @include mixins.respond-to(small) {
+      font-size: 1.375rem;
+    }
+
+    @include mixins.respond-to(medium) {
+      font-size: 1.5625rem;
+    }
+
+    @include mixins.respond-to(large) {
+      font-size: 1.75rem;
+    }
   }
 
   h5 {
@@ -38,10 +62,34 @@
     font-size: 1.25rem;
     color: variables.$subheading-color;
     padding: 0.75rem 0;
+
+    @include mixins.respond-to(small) {
+      font-size: variables.$font-size-base;
+    }
+
+    @include mixins.respond-to(medium) {
+      font-size: 1.125rem;
+    }
+
+    @include mixins.respond-to(large) {
+      font-size: 1.25rem;
+    }
   }
 
   p {
     margin-bottom: variables.$margin-bottom-regular;
+
+    @include mixins.respond-to(small) {
+      margin-bottom: 0.75rem;
+    }
+
+    @include mixins.respond-to(medium) {
+      margin-bottom: 0.85rem;
+    }
+
+    @include mixins.respond-to(large) {
+      margin-bottom: variables.$margin-bottom-regular;
+    }
   }
 }
 

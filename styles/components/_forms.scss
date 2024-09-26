@@ -20,6 +20,16 @@ select {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(variables.$accent-color, 0.25);
   }
+
+  @include mixins.respond-to(small) {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  @include mixins.respond-to(medium) {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
 }
 
 .form-group {
@@ -28,6 +38,10 @@ select {
   label {
     display: block;
     margin: 0.5rem;
+
+    @include mixins.respond-to(small) {
+      margin: 0.25rem;
+    }
   }
 }
 
@@ -37,6 +51,14 @@ select {
   h3 {
     text-align: center;
     margin-bottom: variables.$margin-bottom-regular;
+
+    @include mixins.respond-to(small) {
+      font-size: 1.25rem;
+    }
+
+    @include mixins.respond-to(medium) {
+      font-size: 1.5rem;
+    }
   }
 
   .contact-container {
@@ -47,5 +69,17 @@ select {
     border-radius: 0.5rem;
     padding: variables.$padding-regular;
     margin: 3rem auto;
+
+    @include mixins.respond-to(small) {
+      padding: variables.$padding-regular;
+      margin: 3rem auto;
+      width: 75%;
+    }
+
+    @include mixins.respond-to(medium) {
+      padding: variables.$padding-regular;
+      margin: 3rem auto;
+      width: 75%;
+    }
   }
 }

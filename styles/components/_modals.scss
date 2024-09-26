@@ -18,6 +18,15 @@
   max-height: 90vh;
   padding: variables.$padding-regular;
 
+  @include mixins.respond-to(small) {
+    padding: 0.5rem;
+  }
+
+  @include mixins.respond-to(medium) {
+    max-width: 90%;
+    padding: 0.75rem;
+  }
+
   &.open {
     display: block;
   }
@@ -34,6 +43,11 @@
       padding-bottom: 0.5rem;
       margin-bottom: variables.$margin-bottom-regular;
 
+      @include mixins.respond-to(small) {
+        padding-bottom: 0.25rem;
+        margin-bottom: 0.5rem;
+      }
+
       .close-button {
         background: none;
         border: none;
@@ -41,6 +55,10 @@
         cursor: pointer;
         color: variables.$primary-color;
         @include mixins.transition(color);
+
+        @include mixins.respond-to(small) {
+          font-size: 1.25rem;
+        }
 
         &:hover {
           color: variables.$accent-color;
@@ -57,6 +75,15 @@
         object-fit: contain; 
         border-radius: 0.25rem;
         align-self: center;
+
+        @include mixins.respond-to(small) {
+          max-height: 14rem;
+          max-width: 50%;
+        }
+
+        @include mixins.respond-to(medium) {
+          max-height: 18rem;
+        }
       }
     }
 
@@ -65,6 +92,11 @@
       border-top: 1px solid variables.$modal-border-color;
       padding-top: 0.5rem;
       margin-top: 1rem;
+
+      @include mixins.respond-to(small) {
+        padding-top: 0.25rem;
+        margin-top: 0.5rem;
+      }
 
       .close-button {
         background-color: variables.$accent-color;
@@ -75,6 +107,11 @@
         border-radius: 0.25rem;
         cursor: pointer;
         @include mixins.transition(background-color, color);
+
+        @include mixins.respond-to(small) {
+          font-size: 0.875rem;
+          padding: 0.4rem 0.8rem;
+        }
 
         &:hover {
           background-color: variables.$accent-color;

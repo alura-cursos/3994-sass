@@ -30,12 +30,25 @@
     h2 {
       @extend %base-h2;
       text-align: left;
+
+      @include mixins.respond-to(medium) {
+        font-size: 4rem;
+      }
+
+      @include mixins.respond-to(small) {
+        font-size: 2.5rem;
+        line-height: 4rem;
+      }
     }
 
     p {
       font-size: 1.25rem;
       text-align: left;
       @extend %base-p;
+
+      @include mixins.respond-to(small) {
+        font-size: variables.$font-size-base;
+      }
     }
   }
 
@@ -48,6 +61,10 @@
       @extend %base-h2;
       text-align: center;
       font-size: 4rem;
+
+      @include mixins.respond-to(small) {
+        font-size: 1.75rem;
+      }
     }
 
     p {
@@ -104,6 +121,14 @@
     max-width: 75rem;
     margin: 0 auto;
     padding: 0 5rem;
+
+    @include mixins.respond-to(medium) {
+      flex-direction: column;
+    }
+
+    @include mixins.respond-to(small) {
+      flex-direction: column;
+    }
   }
 }
 
