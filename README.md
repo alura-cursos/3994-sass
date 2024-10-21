@@ -1,7 +1,7 @@
 ![Thumbnail](./thumbnail.png)
 # Serenatto Café
-O Serenatto é uma landing page para um cafés, projetada para apresentar produtos de forma atraente e interativa, proporcionando uma experiência de uso agradável.
-## :martelo: Funcionalidades do projeto
+O Serenatto é uma landing page para um café, projetada para apresentar produtos de forma atraente e interativa, proporcionando uma experiência de uso agradável.
+## Funcionalidades do projeto
 - **Listagem de produtos**: Exibe os produtos, permitindo visualizar a imagem e o nome.
 - **Modal**: Permite visualizar detalhes do produto selecionado, incluindo descrição, proporcionando uma experiência mais imersiva.
 - **Modo escuro**: Alterna entre modos claro e escuro, permitindo que as pessoas escolham a aparência de acordo com sua preferência.
